@@ -41,18 +41,18 @@ O pedido de Ana Souza contém um notebook e dois mouses, com cliente VIP, cupom 
 
 ## Organização
 
-- `src/domain`: entidades e operações sobre seus próprios dados.
-- `src/services/OrderService.js`: coordenação do processamento.
-- `src/services/OrderValidator.js`: validações do cliente e itens.
-- `src/services/InventoryService.js`: consulta e baixa de estoque.
-- `src/services/DiscountCalculator.js`: composição de regras de desconto.
-- `src/services/FreightCalculator.js`: tabela de fretes e cupom FRETEGRATIS.
-- `src/services/PaymentService.js`: processadores de PIX, cartão e boleto.
-- `src/services/OrderPresenter.js`: impressão do resumo.
-- `src/services/NotificationService.js`: simulação de confirmação no console.
-- `src/createApplication.js`: montagem e injeção das dependências.
-- `test/order.test.js`: testes automatizados.
-- `test/fixtures/original`: cópia do código original usada somente como referência nos testes.
+- `src/domain`: entidades e operações sobre seus próprios dados
+- `src/services/OrderService.js`: coordenação do processamento
+- `src/services/OrderValidator.js`: validações do cliente e itens
+- `src/services/InventoryService.js`: consulta e baixa de estoque
+- `src/services/DiscountCalculator.js`: composição de regras de desconto
+- `src/services/FreightCalculator.js`: tabela de fretes e cupom FRETEGRATIS
+- `src/services/PaymentService.js`: processadores de PIX, cartão e boleto
+- `src/services/OrderPresenter.js`: impressão do resumo
+- `src/services/NotificationService.js`: simulação de confirmação no console
+- `src/createApplication.js`: montagem e injeção das dependências
+- `test/order.test.js`: testes automatizados
+- `test/fixtures/original`: cópia do código original usada somente como referência nos testes
 - `evidencias`: saídas reais de execução e testes.
 
 ## Principais mudanças
