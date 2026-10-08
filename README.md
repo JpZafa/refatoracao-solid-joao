@@ -79,7 +79,7 @@ Pagamentos e notificações são simulações, os repositórios usam memória e 
 
 - `01-original.txt`: falha real do original pela ausência de NotificationService.
 - `02-refatorado.txt`: exemplo executado após a refatoração.
-- `03-testes.txt`: 19 testes aprovados e nenhuma falha.
+- `03-testes.txt`: 21 testes aprovados e nenhuma falha.
 - `04-cobertura.txt`: execução adicional com cobertura no Node 24.19.0.
 
 A cobertura é um complemento à comparação de valores e efeitos, não uma garantia isolada de qualidade.

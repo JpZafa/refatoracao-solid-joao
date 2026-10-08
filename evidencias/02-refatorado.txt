@@ -41,5 +41,5 @@ Total: R$ 5471.80
   "total": 5471.8,
   "paymentMethod": "credit_card",
   "status": "confirmed",
-  "createdAt": "2026-10-08T20:11:46.402Z"
+  "createdAt": "2026-10-08T20:49:47.322Z"
 }

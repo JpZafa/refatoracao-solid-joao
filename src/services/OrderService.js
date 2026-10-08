@@ -14,7 +14,11 @@ class OrderService {
   process(order) {
     this.logger.info(`Iniciando processamento do pedido ${order.id}.`);
     this.validator.validate(order);
-    this.inventory.validate(order.items);
+    // Cada item e validado antes de passar ao proximo, como no original.
+    for (const item of order.items) {
+      this.validator.validateItem(item);
+      this.inventory.validate([item]);
+    }
     const subtotal = order.getSubtotal();
     const baseDiscount = this.discounts.calculate(order, subtotal);
     const freight = this.freight.calculate(order);

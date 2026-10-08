@@ -167,3 +167,28 @@ test('apresentacao mantem as linhas e a formatacao do resumo', () => {
     'Cidade: Presidente Prudente/SP', 'Itens: 3', 'Subtotal: R$ 6440.00',
     'Desconto: R$ 1159.20', 'Frete: R$ 30.00', 'Taxas: R$ 161.00', 'Total: R$ 5471.80']);
 });
+
+
+test('regioes com nomes de propriedades de Object usam o frete padrao original', () => {
+  for (const region of ['constructor', 'toString', '__proto__', 'hasOwnProperty']) {
+    const f = fixture({ region });
+    const original = originalService();
+    const other = fixture({ region });
+    assert.deepEqual(plain(f.orderService.process(f.order)), plain(original.process(other.order)));
+  }
+});
+
+test('primeiro item com estoque insuficiente tem prioridade sobre segundo item sem produto', () => {
+  const f = fixture();
+  f.order.items[0].quantity = 9;
+  f.order.items[1].product = null;
+  const original = originalService();
+  const other = fixture();
+  other.order.items[0].quantity = 9;
+  other.order.items[1].product = null;
+  const message = 'Estoque insuficiente para Notebook Pro 14.';
+  assert.throws(() => original.process(other.order), { message });
+  assert.throws(() => f.orderService.process(f.order), { message });
+  assert.equal(f.productRepository.findById('p1').stock, 8);
+  assert.equal(f.orderRepository.findAll().length, 0);
+});
