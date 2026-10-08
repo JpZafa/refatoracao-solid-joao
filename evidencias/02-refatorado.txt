@@ -1,0 +1,45 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> arquitetura-solid-refatoracao-node@1.0.0 start
+> node src/index.js
+
+[INFO] Iniciando processamento do pedido o1001.
+Confirmacao para ana.souza@example.com: pedido o1001, total R$ 5471.80.
+Resumo do pedido
+Cliente: Ana Souza
+Cidade: Presidente Prudente/SP
+Itens: 3
+Subtotal: R$ 6440.00
+Desconto: R$ 1159.20
+Frete: R$ 30.00
+Taxas: R$ 161.00
+Total: R$ 5471.80
+{
+  "id": "o1001",
+  "customerName": "Ana Souza",
+  "customerEmail": "ana.souza@example.com",
+  "city": "Presidente Prudente",
+  "state": "SP",
+  "items": [
+    {
+      "productId": "p1",
+      "name": "Notebook Pro 14",
+      "quantity": 1,
+      "subtotal": 6200
+    },
+    {
+      "productId": "p2",
+      "name": "Mouse Sem Fio",
+      "quantity": 2,
+      "subtotal": 240
+    }
+  ],
+  "subtotal": 6440,
+  "discount": 1159.2,
+  "freight": 30,
+  "paymentFee": 161,
+  "total": 5471.8,
+  "paymentMethod": "credit_card",
+  "status": "confirmed",
+  "createdAt": "2026-10-08T20:11:46.402Z"
+}

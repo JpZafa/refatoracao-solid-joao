@@ -1,0 +1,22 @@
+{
+  "name": "arquitetura-solid-refatoracao-node",
+  "version": "1.0.0",
+  "description": "Projeto base para atividade de refatoracao em arquitetura de software.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/order.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/order.test.js"
+  },
+  "keywords": [
+    "arquitetura",
+    "solid",
+    "refatoracao",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}

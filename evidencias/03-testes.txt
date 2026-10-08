@@ -1,0 +1,32 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> arquitetura-solid-refatoracao-node@1.0.0 test
+> node --test test/order.test.js
+
+✔ exemplo do README tem valores, registro, estoque e notificacao corretos (2.22838ms)
+✔ 576 cenarios preservam o resumo e estoque calculados pelo codigo original (321.959362ms)
+✔ sem cliente mantem o erro original e nao altera estoque nem salva (1.048412ms)
+✔ email invalido mantem o erro original e nao altera estoque nem salva (0.590615ms)
+✔ sem itens mantem o erro original e nao altera estoque nem salva (0.718748ms)
+✔ item sem produto mantem o erro original e nao altera estoque nem salva (0.673129ms)
+✔ quantidade zero mantem o erro original e nao altera estoque nem salva (0.669093ms)
+✔ quantidade negativa mantem o erro original e nao altera estoque nem salva (0.790105ms)
+✔ produto inexistente mantem o erro original e nao altera estoque nem salva (0.620911ms)
+✔ estoque insuficiente mantem o erro original e nao altera estoque nem salva (0.779318ms)
+✔ pagamento invalido mantem o erro original e nao altera estoque nem salva (0.860239ms)
+✔ total invalido mantem o erro original e nao altera estoque nem salva (1.014751ms)
+✔ boleto aguarda pagamento e nao envia confirmacao (0.309634ms)
+✔ limite de desconto adicional e estritamente maior que 8000 (0.557565ms)
+✔ PIX acumula 3 por cento com VIP e TECH10 (0.250986ms)
+✔ composicao permite nova regra e novo pagamento sem mudar OrderService (0.349944ms)
+✔ instancia compartilhada de repositorio recebe baixas de pedidos sucessivos (0.216885ms)
+✔ objetos de dominio calculam peso, quantidade e resumo dos itens (0.195533ms)
+✔ apresentacao mantem as linhas e a formatacao do resumo (0.312038ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 426.152629
